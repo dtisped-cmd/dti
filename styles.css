@@ -1,29 +1,34 @@
 
 :root{
-  --primary:#0b3b66; /* deep academic blue */
-  --accent:#1464a0;
-  --muted:#586069;
-  --bg:#fbfcfe;
+  /* لوحة ألوان مستمدة من شعار المعهد (ذهبي - أبيض) */
+  --primary:#b78f3e; /* ذهب دافئ */
+  --accent:#e9d9b7;  /* ذهبي فاتح/خلفية */
+  --logo-bg:#b78f3e;
+  --white:#ffffff;
+  --muted:#7a6a52;   /* لون نص ثانوي متناسق */
+  --bg:#fffdf9;      /* خلفية بيضاء دافئة */
   --card:#ffffff;
-  --text:#1b1b1b;
+  --text:#222222;    /* نص اسود دافئ */
 }
 *{box-sizing:border-box}
 html,body{height:100%;margin:0;font-family:"Noto Sans Arabic", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;color:var(--text);background:var(--bg);}
 .container{max-width:1100px;margin:0 auto;padding:1rem}
 .skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
 .skip-link:focus{position:static;left:auto;width:auto;height:auto;background:#fff;padding:.5rem;border:2px solid var(--primary)}
-.masthead{border-bottom:2px solid #e6eef8;background:#fff}
-.masthead-inner{display:flex;align-items:center;justify-content:space-between;padding:.75rem 1rem}
+.masthead{border-bottom:1px solid rgba(183,143,62,0.18);background:var(--white);color:var(--primary)}
+.masthead-inner{display:flex;align-items:center;justify-content:space-between;padding:.8rem 1rem}
 .brand{display:flex;align-items:center;gap:.9rem}
 .logo-img{width:56px;height:56px}
 .site-title{margin:0;font-family:"Noto Serif Arabic", Georgia, 'Times New Roman', serif;font-size:1.25rem;color:var(--primary)}
-.site-tag{margin:0;color:var(--muted);font-size:.9rem}
-.main-nav a{margin-left:1rem;text-decoration:none;color:var(--primary);font-weight:600}
+.site-tag{margin:0;color:var(--muted);font-size:.95rem}
+.main-nav a{margin-left:1rem;text-decoration:none;color:var(--primary);font-weight:700}
+.main-nav a:hover{opacity:.95;text-decoration:underline}
 
-.academic-hero{padding:3.5rem 0;background:linear-gradient(180deg, #f4f8ff, #fff);text-align:center}
-.academic-hero .lead{color:var(--muted);max-width:780px;margin:0.5rem auto 1rem}
+.academic-hero{padding:3.5rem 0;background:linear-gradient(180deg, rgba(183,143,62,0.06), var(--bg));text-align:center}
+.academic-hero h2{color:var(--primary);font-size:1.85rem;margin:0}
+.academic-hero .lead{color:var(--muted);max-width:820px;margin:0.6rem auto 1rem}
 .btn{display:inline-block;padding:.6rem 1rem;border-radius:6px;text-decoration:none}
-.btn.primary{background:var(--primary);color:#fff}
+.btn.primary{background:var(--primary);color:var(--white);border:1px solid rgba(0,0,0,0.04)}
 .btn.outline{border:1px solid var(--primary);color:var(--primary);background:transparent}
 
 .section{padding:2rem 0}
@@ -31,17 +36,35 @@ html,body{height:100%;margin:0;font-family:"Noto Sans Arabic", system-ui, -apple
 .two-col h3{margin-top:0}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem}
 .two-col-cards{grid-template-columns:repeat(2,1fr)}
-.card{background:var(--card);border:1px solid #e8eef6;padding:1rem;border-radius:8px;box-shadow:0 1px 0 rgba(11,59,102,0.03)}
+.card{background:var(--card);border:1px solid rgba(183,143,62,0.06);padding:1rem;border-radius:8px;box-shadow:0 1px 0 rgba(0,0,0,0.03)}
 .pub-list{margin-top:.75rem;color:var(--muted)}
 
 .contact a{color:var(--primary);text-decoration:none}
 
-.site-footer{border-top:1px solid #e6eef8;padding:1.25rem 0;text-align:center;color:var(--muted)}
+.site-footer{border-top:6px solid rgba(183,143,62,0.22);padding:1.25rem 0;text-align:center;color:var(--muted);background:var(--white)}
+.site-footer a{color:var(--primary)}
+
+/* Improve contrast for small text on colored backgrounds */
+.masthead .main-nav a,.site-footer .foot-meta{font-weight:600}
 
 @media (max-width:900px){
   .two-col{grid-template-columns:1fr}
   .cards{grid-template-columns:1fr}
   .main-nav{display:flex;gap:.5rem;flex-wrap:wrap}
+}
+
+@media (max-width:600px){
+  .logo-img{width:48px;height:48px}
+  .masthead-inner{padding:.6rem 0.75rem}
+  .site-title{font-size:1rem}
+  .main-nav{display:flex;flex-direction:column;align-items:flex-end;gap:0}
+  .main-nav a{margin:0;padding:.45rem 0;text-decoration:none}
+  .academic-hero{padding:2rem 0}
+  .academic-hero h2{font-size:1.4rem}
+  .academic-hero .lead{font-size:0.98rem;padding:0 0.5rem}
+  .hero-actions .btn{display:block;width:100%;max-width:none;margin:.5rem 0}
+  .container{padding:0.75rem}
+  .cards{gap:0.75rem}
 }
 
 /* Print */

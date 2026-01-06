@@ -1,8 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>المقررات — المعهد التقاني لطب الأسنان</title>
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -10,7 +10,7 @@
     <header class="masthead" role="banner">
       <div class="container masthead-inner">
         <div class="brand">
-          <img src="assets/المعهد-التقاني-لطب-الأسنان.png" alt="شعار المعهد" class="logo-img">
+          <img src="assets/المعهد-التقاني-لطب-الأسنان.png" alt="شعار المعهد" class="logo-img" height="64">
           <div>
             <h1 class="site-title">المقررات</h1>
             <p class="site-tag">المعهد التقاني لطب الأسنان</p>
@@ -19,22 +19,51 @@
         <nav class="main-nav" role="navigation">
           <a href="الصفحة-الرئيسية.html">الصفحة الرئيسية</a>
           <a href="بوابة-الطالب.html">بوابة الطالب</a>
-          <a href="المقررات.html">المقررات</a>
+          <a href="المقررات.html" class="active">المقررات</a>
           <a href="الإعلانات.html">الإعلانات</a>
           <a href="مساعدة.html">مساعدة</a>
           <a href="الرؤية.html">الرؤية</a>
         </nav>
       </div>
     </header>
+
     <main class="section">
       <div class="container">
         <h2>المقررات</h2>
-        <p>قوائم المقررات والوحدات الدراسية والتواريخ والمراجع.</p>
+        <p>قوائم المقررات والوحدات الدراسية والتواريخ والمراجع. النسخة المحلية هذه تحافظ على الروابط الخارجية كما في المصدر.</p>
+
+        <article class="course-list">
+          <h3><a href="https://sites.google.com/view/dti-sy/مقررات-قسم-التعويضات" target="_blank" rel="noopener">مقررات قسم التعويضات</a></h3>
+          <p>المقررات التي يتوجب على الطالب إكمالها للحصول على شهادة دبلوم تعويضات أسنان (فني أسنان).</p>
+
+          <h3><a href="https://sites.google.com/view/dti-sy/مقررات-قسم-مساعد-طبيب" target="_blank" rel="noopener">مقررات قسم مساعد طبيب</a></h3>
+          <p>المقررات التي يتوجب على الطالبة إكمالها للحصول على شهادة دبلوم مساعد طبيب أسنان.</p>
+        </article>
+
+        <section class="notes">
+          <h3>ملاحظات وروابط مفيدة</h3>
+          <ul>
+            <li><a href="https://forms.gle/9Ar57ofdm2ULvwtS8" target="_blank" rel="noopener">نموذج/استمارة</a></li>
+            <li><a href="https://chat.whatsapp.com/FBWPC6rBRQC4koz4cq3fuG" target="_blank" rel="noopener">مجموعة واتساب</a></li>
+            <li><a href="https://www.facebook.com/share/17Ro4T1jvL/" target="_blank" rel="noopener">مشاركة فيسبوك</a></li>
+            <li><a href="https://sites.google.com/view/dti-sy/%D8%A7%D9%84%D9%85%D9%82%D8%B1%D8%B1%D8%A7%D8%AA" target="_blank" rel="noopener">الصفحة الأصلية للمقررات (Google Sites)</a></li>
+          </ul>
+        </section>
+
+        <section class="map">
+          <h3>موقع المعهد</h3>
+          <div class="map-wrapper">
+            <iframe src="https://maps-api-ssl.google.com/maps?hl=en-US&ll=35.525261,35.804357&output=embed&q=35.525419,35.804756&z=18" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </section>
       </div>
     </main>
+
     <footer class="site-footer" role="contentinfo">
       <div class="container">
         <p>© <span id="year"></span> المعهد التقاني لطب الأسنان</p>
+        <p>تأسس المعهد التقاني لطب الأسنان عام 2019 في جامعة اللاذقية.</p>
+        <p>مدير المعهد: أ.م.د باسمة أحمد يوسف</p>
       </div>
     </footer>
     <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
